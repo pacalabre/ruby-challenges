@@ -13,9 +13,9 @@ class Calculator
 
     def add(a,b)
       @result = a + b
-  end
+    end
 
-  def sub(a,b)
+    def sub(a,b)
       @result = a-b
     end
 
@@ -23,8 +23,8 @@ class Calculator
       @result = a*b
     end
 
-  def div(a,b)
-   @result = a/b
+    def div(a,b)
+      @result = a/b
     end
 
     if @operator == "add"
