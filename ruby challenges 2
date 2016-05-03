@@ -1,0 +1,15 @@
+def reverse
+  arr2=[]
+  puts "enter a string"
+  string = gets.chomp
+  split_str = string.split('')
+  i = 0
+  until i == string.length do
+   pop_index = split_str.pop
+   arr2.push(pop_index)
+   i += 1
+  end
+arr2.join
+end
+
+reverse()
