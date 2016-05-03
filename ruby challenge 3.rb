@@ -1,26 +1,42 @@
-class Account
-  #attr_accessor :balance, :withdraw, :deposit
 
-  #def initialize(balance, withdraw, deposit)
-  #  @balance = balance
-  #  @withdraw = withdraw
-  #  @deposit = deposit
-  #end
+
+  @balance
+  @withdraw
+  @deposit
+
+  def input
+    puts "what would you like to do? balance withdraw or deposit?"
+    answer = gets.chomp
+
+    if answer == "balance"
+      balance()
+    end
+
+    if answer == "withdraw"
+      current_balance = balance()
+      puts "how much would you like to withdraw?"
+      answer_withdraw = gets.chomp
+      answer_int = answer_withdraw.to_i
+      return current_balance - answer_int
+    end
+
+    if answer == "deposit"
+      deposit()
+    end
+  end
 
   def balance
-    balance = 4000
+    @balance = 4000
   end
 
-  def withdraw(num)
-  balance - num
+  def withdraw()
+
   end
 
-  def deposit(num)
-  balance + num
+  def deposit()
+    puts "how much would you like to deposit?"
+    answer_deposit = gets.chomp
+    @balance + num
   end
-end
-account = Account.new
 
-puts account.balance
-# puts account.withdraw(1000)
-puts account.deposit(1000)
+input()
