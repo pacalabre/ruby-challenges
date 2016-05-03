@@ -1,29 +1,16 @@
+num = rand(1..4)
+num_guesses = 0
 
-
-def guess
-  num = rand(1..4)
-  puts "guess a number between 1-4"
-  answer = gets.chomp
-  answer_int = answer.to_i
-
- if answer_int < num
-  puts "number is high"
-  puts "guess again"
-  answer = gets.chomp
-  answer_int = answer.to_i
- end
-
- if answer_int > num
-  puts "number is lower"
-  puts "guess again"
-  answer = gets.chomp
-  answer_int = answer.to_i
- end
+print "what is your guess?"
+answer = gets.to_i
 
  if answer == num
   puts "you got it dude"
- end
-
+ elsif answer > num
+  puts "number is too high"
+  num_guesses +=1
+ else
+  puts "number is too low"
+  num_guesses +=1
 end
 
-guess()
