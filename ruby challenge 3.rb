@@ -21,7 +21,11 @@
     end
 
     if answer == "deposit"
-      deposit()
+      current_balance = balance()
+      puts "how much would you like to deposit?"
+      answer_withdraw = gets.chomp
+      answer_int = answer_withdraw.to_i
+      return current_balance + answer_int
     end
   end
 
