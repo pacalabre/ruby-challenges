@@ -5,11 +5,11 @@ def reverse
   split_str = string.split('')
   i = 0
   until i == string.length do
-   pop_index = split_str.pop
-   arr2.push(pop_index)
-   i += 1
+    pop_index = split_str.pop
+    arr2.push(pop_index)
+    i += 1
   end
-arr2.join
+  arr2.join
 end
 
 reverse()
